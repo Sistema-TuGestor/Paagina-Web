@@ -1,16 +1,119 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descargar STG</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Descargar STG - Sistema TuGestor</title>
+  <style>
+    /* Animaciones */
+    @keyframes slideInLeft {
+      0% { opacity: 0; transform: translateX(-50px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInRight {
+      0% { opacity: 0; transform: translateX(50px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    /* Estilos base */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #77BFC7, #8A2BE2);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    header {
+      padding: 2rem 1rem 1rem;
+      animation: slideInLeft 1s ease-out;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: 500px;
+      margin: 1rem auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      animation: slideInRight 1.2s ease-out;
+    }
+
+    .download-button {
+      background-color: #F18200;
+      color: #fff;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      margin-top: 1.5rem;
+      animation: slideInUp 1.5s ease-out, pulse 2.5s infinite;
+    }
+
+    .download-button:hover {
+      background-color: #FFC901;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #eee;
+      animation: slideInUp 1.8s ease-out;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .download-button {
+        width: 80%;
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header>
     <h1>Sistema TuGestor (STG)</h1>
-    <a href="https://raw.githubusercontent.com/SistemaTuGestor/Paagina-Web/main/artefactos/Sistema TuGestor.exe" download="STG.exe">
-        <button>Descargar</button>
-    </a>
+  </header>
+
+  <!-- Imagen destacada -->
+  <img class="hero-image" src="https://i.ibb.co/1fycBDnR/324b6fac-9af7-4bf4-afa0-8f86bc57b9f0-removebg-preview-1.png" alt="Logo STG">
+
+  <!-- Botón de descarga -->
+  <a href="https://raw.githubusercontent.com/SistemaTuGestor/Paagina-Web/main/artefactos/Sistema TuGestor.rar" download="STG.exe">
+    <button class="download-button">Descargar STG</button>
+  </a>
+
+  <footer>
+    <p><!-- comentario de cierre--></p>
+  </footer>
 </body>
 </html>
-
+    <a href="https://raw.githubusercontent.com/SistemaTuGestor/Paagina-Web/main/artefactos/Sistema TuGestor.exe" download="STG.exe">
